@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Vazirmatn';
-    src: url('@/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+    src: url('@/assets/fonts/vazirmatn/Vazirmatn.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }

@@ -1,3 +1,7 @@
 {
-    "home": "Home"
+    "navbar": {
+        "home": "Home",
+        "blog": "Blog",
+        "about me" : "About Me"
+    }
 }
