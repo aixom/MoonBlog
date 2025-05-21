@@ -13,9 +13,17 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   i18n: {
     locales: [
-      { code: 'en', language: 'en-US' },
-      { code: 'fa', language: 'fa-IR' },
+      {
+        code: 'en',
+        file: 'en.json'
+      },
+      {
+        code: 'fa',
+        file: 'fa.json'
+      }
     ],
     defaultLocale: 'en',
+    lazy: false,
+    strategy: 'no_prefix',
   }
 });

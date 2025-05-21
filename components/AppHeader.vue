@@ -11,13 +11,13 @@
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow">
                     <li>
-                        <NuxtLink to="/">خانه</NuxtLink>
+                        <NuxtLink to="/">{{ $t('navbar.home') }}</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/blog">بلاگ</NuxtLink>
+                        <NuxtLink to="/blog">{{ $t('navbar.blog') }}</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/about">درباره من</NuxtLink>
+                        <NuxtLink to="/about">{{ $t('navbar.about') }}</NuxtLink>
                     </li>
                 </ul>
             </div>
@@ -27,37 +27,37 @@
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
                 <li>
-                    <NuxtLink to="/">خانه</NuxtLink>
+                    <NuxtLink to="/">{{ $t('navbar.home') }}</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/blog">بلاگ</NuxtLink>
+                    <NuxtLink to="/blog">{{ $t('navbar.blog') }}</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/about">درباره من</NuxtLink>
+                    <NuxtLink to="/about">{{ $t('navbar.about') }}</NuxtLink>
                 </li>
             </ul>
         </div>
 
         <div class="navbar-end">
-            <button class="btn btn-ghost" @click="toggleLanguage">
+            <button @click="toggleLanguage" class="btn btn-ghost">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
-                {{ currentLanguage === 'fa' ? 'English' : 'فارسی' }}
+                {{ locale === 'en' ? 'فارسی' : 'English' }}
             </button>
         </div>
     </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { useI18n } from '#imports'
 
-const currentLanguage = ref('fa');
+const { locale, locales, setLocale } = useI18n();
+
 function toggleLanguage() {
-    currentLanguage.value = currentLanguage.value === 'fa' ? 'en' : 'fa';
-
-    console.log('Language changed to:', currentLanguage.value);
+    setLocale(locale.value === 'en' ? 'fa' : 'en');
 }
-</script> 
+
+</script>
