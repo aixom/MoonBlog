@@ -4,3 +4,4 @@
     <p class="text-center">این محتوای صفحه اصلی است.</p>
   </div>
 </template>
+

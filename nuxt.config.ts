@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   css: ['~/assets/css/main.css'],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   i18n: {
     locales: [
       {
