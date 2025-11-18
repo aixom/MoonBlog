@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
   ],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css','@/assets/css/theme.css'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },

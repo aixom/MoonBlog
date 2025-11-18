@@ -4,6 +4,16 @@
   </NuxtLayout>
 </template>
 
+<script setup>
+import { useTheme } from '~/composables/useTheme';
+import { onMounted } from 'vue';
+
+const { initTheme } = useTheme();
+
+onMounted(() => {
+  initTheme();
+});
+</script>
 
 <style>
 .page-enter-active,

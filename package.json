@@ -13,6 +13,7 @@
     "@nuxt/content": "^3.5.1",
     "@nuxt/icon": "^1.12.0",
     "@nuxtjs/i18n": "^9.5.4",
+    "better-sqlite3": "^12.4.1",
     "daisyui": "^5.0.35",
     "nuxt": "^3.17.1",
     "vue": "^3.5.13",
@@ -20,5 +21,13 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0"
+  },
+  "overrides": {
+    "glob": "^10.4.5",
+    "rimraf": "^5.0.0",
+    "npmlog": "^7.0.0",
+    "gauge": "^5.0.0",
+    "are-we-there-yet": "^4.0.0",
+    "inflight": "^1.0.6"
   }
 }
