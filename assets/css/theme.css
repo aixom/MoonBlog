@@ -1,0 +1,62 @@
+/* assets/css/theme.css */
+:root {
+  /* متغیرهای رنگ برای حالت روشن */
+  --primary-light: #8b5cf6;
+  --secondary-light: #6366f1;
+  --text-light: #1e293b;
+  --text-light-secondary: #475569;
+  --background-light: #ffffff;
+  --card-bg-light: rgba(255, 255, 255, 0.7);
+  --card-border-light: #818cf8;
+}
+
+:root.dark {
+  /* متغیرهای رنگ برای حالت تاریک */
+  --primary-dark: #a855f7;
+  --secondary-dark: #818cf8;
+  --text-dark: #f8fafc;
+  --text-dark-secondary: #cbd5e1;
+  --background-dark: #0f172a;
+  --card-bg-dark: rgba(30, 27, 75, 0.4);
+  --card-border-dark: #8b5cf6;
+}
+
+/* استایل‌های عمومی */
+body {
+  transition: color 0.5s, background-color 0.5s;
+}
+
+:root.light {
+  color-scheme: light;
+}
+
+:root.light body {
+  color: var(--text-light);
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+:root.dark body {
+  color: var(--text-dark);
+}
+
+:root.light h1,
+:root.light h2,
+:root.light h3,
+:root.light h4,
+:root.light h5,
+:root.light h6 {
+  color: var(--text-light);
+}
+
+:root.light p {
+  color: var(--text-light-secondary);
+}
+
+.info-card {
+  background: var(--card-bg);
+  border-left: 4px solid var(--card-border);
+  box-shadow: 0 10px 15px -3px var(--card-shadow);
+}
